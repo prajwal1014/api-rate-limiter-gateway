@@ -19,6 +19,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          script: cd /home/ubuntu/api-rate-limiter-gateway && bash deploy.sh
+          script: bash /home/ubuntu/api-rate-limiter-gateway/deploy.sh
+
 
 

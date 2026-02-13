@@ -21,7 +21,5 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           cd ~/api-rate-limiter-gateway
-          git pull origin main
-          pip3 install -r requirements.txt
-          pkill -f uvicorn
-          nohup uvicorn main:app --host 0.0.0.0 --port 8080 > output.log 2>&1 &
+          ./deploy.sh
+          
